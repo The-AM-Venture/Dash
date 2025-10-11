@@ -19,6 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
