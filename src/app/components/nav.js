@@ -30,68 +30,69 @@ export default function Nav() {
         </Link>
       </div>
 
-      
-
-
-     {/* gerneral links*/}
-      <div className="flex flex-row text-red-50 items-center">
-      <div className='rounded-full  justify-items-center bg-sky-950 flex w-12 h-12'>
-        <div className='my-auto block m-auto flex justify-center'> 
-          <Lineicons icon={Bookmark1Duotone} size={30} color="white" strokeWidth={2} />
-        </div>
-      </div>
-      <p className="ml-1 text-black text-xl font-bold">General</p>
-      </div>
-
-      <div className='ml-10'>
-
-        {
-          links.map( (link,i) =>
-            <Link href={link.link} key={i} target="_blank" rel="noopener noreferrer">
-              <div className="flex flex-row text-red-50 items-center">
-                  <div className='justify-items-center flex w-7 h-7'>
-                    <div className='my-auto block m-auto flex justify-center'> 
-                      <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
-                    </div>
-                  </div>
-                  <p className="ml-1 text-black text-lg">{link.name}</p>
-              </div>
-            </Link>
-
-          )
-        }
-
-      </div>
-
-      {/* project links*/}
-      <div className="flex flex-row text-red-50 items-center">
-        <div className='rounded-full  justify-items-center bg-sky-950 flex w-12 h-12'>
-          <div className='my-auto block m-auto flex justify-center'> 
-            <Lineicons icon={HelmetSafety1Duotone} size={30} color="white" strokeWidth={2} />
+      <div className='px-8 pt-10'>
+        {/* gerneral links*/}
+          <div className="flex flex-row text-red-50 items-center">
+          <div className='rounded-full  justify-items-center bg-sky-950 flex w-12 h-12'>
+            <div className='my-auto block m-auto flex justify-center'> 
+              <Lineicons icon={Bookmark1Duotone} size={30} color="white" strokeWidth={2} />
+            </div>
           </div>
-        </div>
-        <p className="ml-1 text-black text-xl font-bold">Projects</p>
-        </div>
+          <p className="ml-1 text-black text-xl font-bold">General</p>
+          </div>
 
-        <div className='ml-10'>
+          <div className='ml-10'>
 
-          {
-            pLinks.map( (link,i) =>
-              <Link href={link.link} key={i} target="_blank" rel="noopener noreferrer">
-                <div className="flex flex-row text-red-50 items-center">
-                    <div className='justify-items-center flex w-7 h-7'>
-                      <div className='my-auto block m-auto flex justify-center'> 
-                        <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
+            {
+              links.map( (link,i) =>
+                <Link href={link.link} key={i} target="_blank" rel="noopener noreferrer">
+                  <div className="flex flex-row text-red-50 items-center">
+                      <div className='justify-items-center flex w-7 h-7'>
+                        <div className='my-auto block m-auto flex justify-center'> 
+                          <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
+                        </div>
                       </div>
-                    </div>
-                    <p className="ml-1 text-black text-lg">{link.name}</p>
-                </div>
-              </Link>
+                      <p className="ml-1 text-black text-lg">{link.name}</p>
+                  </div>
+                </Link>
 
-            )
-          }
+              )
+            }
+
+          </div>
+
+          {/* project links*/}
+          <div className="flex flex-row mt-5 items-center">
+            <div className='rounded-full  justify-items-center bg-sky-950 flex w-12 h-12'>
+              <div className='my-auto block m-auto flex justify-center'> 
+                <Lineicons icon={HelmetSafety1Duotone} size={30} color="white" strokeWidth={2} />
+              </div>
+            </div>
+            <p className="ml-1 text-black text-xl font-bold">Projects</p>
+            </div>
+
+            <div className='ml-10'>
+
+              {
+                pLinks.map( (link,i) =>
+                  <Link href={link.link} key={i} target="_blank" rel="noopener noreferrer">
+                    <div className="flex flex-row text-red-50 items-center">
+                        <div className='justify-items-center flex w-7 h-7'>
+                          <div className='my-auto block m-auto flex justify-center'> 
+                            <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
+                          </div>
+                        </div>
+                        <p className="ml-1 text-black text-lg">{link.name}</p>
+                    </div>
+                  </Link>
+
+                )
+              }
 
         </div>
+
+      </div>
+
     </div>
     </>
   )
