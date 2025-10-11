@@ -1,18 +1,17 @@
 import Link from 'next/link'
 import { Lineicons } from "@lineiconshq/react-lineicons";
-import { Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone } from "@lineiconshq/free-icons";
+import { Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone, HelmetSafety1Duotone, Globe1Duotone } from "@lineiconshq/free-icons";
 import React from 'react';
 
 const links = [
   {name: 'Home', icon: Home2Duotone, link: 'https://home.theamventure.com'},
   {name: 'Code', icon: Code1Duotone, link: 'https://code.theamventure.com'},
-  {name: 'link3', icon: Bookmark1Duotone, link: 'www.google.com'},
 
 ];
 
 const pLinks = [
-  {name: 'My personal website', icon: Home2Duotone, link: 'https:/alfredmalone.com'},
-  {name: 'Val Bui', icon: Code1Duotone, link: 'https://valbui.com'},
+  {name: 'My personal website', icon: Globe1Duotone, link: 'https:/alfredmalone.com'},
+  {name: 'Val Bui', icon: Globe1Duotone, link: 'https://valbui.com'},
 
 ];
 
@@ -50,7 +49,7 @@ export default function Nav() {
               <div className="flex flex-row text-red-50 items-center">
                   <div className='justify-items-center flex w-7 h-7'>
                     <div className='my-auto block m-auto flex justify-center'> 
-                      <Lineicons icon={link.icon} size={20} color="red" strokeWidth={2} />
+                      <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
                     </div>
                   </div>
                   <p className="ml-1 text-black text-lg">{link.name}</p>
@@ -66,10 +65,10 @@ export default function Nav() {
       <div className="flex flex-row text-red-50 items-center">
         <div className='rounded-full  justify-items-center bg-sky-950 flex w-12 h-12'>
           <div className='my-auto block m-auto flex justify-center'> 
-            <Lineicons icon={Bookmark1Duotone} size={30} color="white" strokeWidth={2} />
+            <Lineicons icon={HelmetSafety1Duotone} size={30} color="white" strokeWidth={2} />
           </div>
         </div>
-        <p className="ml-1 text-black text-xl font-bold">General</p>
+        <p className="ml-1 text-black text-xl font-bold">Projects</p>
         </div>
 
         <div className='ml-10'>
@@ -80,7 +79,7 @@ export default function Nav() {
                 <div className="flex flex-row text-red-50 items-center">
                     <div className='justify-items-center flex w-7 h-7'>
                       <div className='my-auto block m-auto flex justify-center'> 
-                        <Lineicons icon={link.icon} size={20} color="red" strokeWidth={2} />
+                        <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
                       </div>
                     </div>
                     <p className="ml-1 text-black text-lg">{link.name}</p>
