@@ -27,7 +27,7 @@ export default function Nav() {
 
         {
           links.map( (link,i) =>
-            <Link href={link.link}>
+            <Link href={link.link} key={i}>
               <div className="flex flex-row text-red-50 items-center">
                   <div className='justify-items-center flex w-7 h-7'>
                     <div className='my-auto block m-auto flex justify-center'> 
