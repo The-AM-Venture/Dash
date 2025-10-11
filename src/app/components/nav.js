@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { Lineicons } from "@lineiconshq/react-lineicons";
-import { Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone, HelmetSafety1Duotone, Globe1Duotone } from "@lineiconshq/free-icons";
+import { Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone, HelmetSafety1Duotone, Globe1Duotone, DashboardSquare1Duotone } from "@lineiconshq/free-icons";
 import React, { useState }  from 'react';
 
 const links = [
@@ -20,17 +20,19 @@ export default function Nav() {
   const [sidbarCollapse, setSidbarCollapse] = useState(false);
   return (
     <>
-    <div className={sidbarCollapse ? `w-80 h-screen bg-sky-950` : `w-80 h-screen bg-sky-50`}>
+    <div className={sidbarCollapse ? `w-20 bg-sky-50 h-screen transition-all duration-500 -right-36 ` : `w-80 h-screen bg-sky-50 transition-all duration-500 -left-36 `}>
 
-      <div className="py-5 px-5 flex flex-row items-center">
+      <div className={sidbarCollapse ? "py-5 px-5 flex flex-col items-center" : "py-5 px-5 flex flex-row items-center"}>
         <div className="rounded-full  justify-items-center flex w-15 h-15">
           <img className="w-100" src="https://bucket.theamventure.com/Logo/amv/logo.png" />
         </div>
-        <h1 className="ml-5 text-black text-xl font-bold">AMV</h1> 
-        <div className=" ml-auto" onClick={() => setSidbarCollapse(sidbarCollapse === true ? false : true)}>
-          <Lineicons  icon={ChevronLeftCircleDuotone} size={40} color="black" strokeWidth={2} />
+        <h1 className={sidbarCollapse ? 'invisible' : "ml-5 text-black text-xl font-bold visible"}>AMV</h1> 
+        <div className={sidbarCollapse ? 'ml-1' : " ml-auto"} onClick={() => setSidbarCollapse(sidbarCollapse === true ? false : true)}>
+          <Lineicons  icon={sidbarCollapse ? DashboardSquare1Duotone : ChevronLeftCircleDuotone} size={40} color="black" strokeWidth={2} />
         </div>
       </div>
+
+      <div className={sidbarCollapse ? 'invisible' : 'visable'}>
 
       <div className='px-8 pt-10'>
         {/* gerneral links*/}
@@ -92,6 +94,8 @@ export default function Nav() {
               }
 
         </div>
+
+      </div>
 
       </div>
 
