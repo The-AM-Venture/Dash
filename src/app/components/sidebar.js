@@ -16,7 +16,7 @@ const pLinks = [
 
 ];
 
-export default function Nav() {
+export default function Sidebar() {
   const [sidbarCollapse, setSidbarCollapse] = useState(true);
   return (
     <>
