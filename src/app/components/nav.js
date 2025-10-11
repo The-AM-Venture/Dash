@@ -17,7 +17,7 @@ const pLinks = [
 ];
 
 export default function Nav() {
-  const [sidbarCollapse, setSidbarCollapse] = useState(false);
+  const [sidbarCollapse, setSidbarCollapse] = useState(true);
   return (
     <>
     <div className={sidbarCollapse ? `w-20 bg-sky-50 h-screen transition-all duration-500 -right-36 ` : `w-80 h-screen bg-sky-50 transition-all duration-500 -left-36 `}>
@@ -27,7 +27,7 @@ export default function Nav() {
           <img className="w-100" src="https://bucket.theamventure.com/Logo/amv/logo.png" />
         </div>
         <h1 className={sidbarCollapse ? 'invisible' : "ml-5 text-black text-xl font-bold visible"}>AMV</h1> 
-        <div className={sidbarCollapse ? 'ml-1' : " ml-auto"} onClick={() => setSidbarCollapse(sidbarCollapse === true ? false : true)}>
+        <div className={sidbarCollapse ? 'ml-1' : " ml-auto"} onClick={() => setSidbarCollapse(sidbarCollapse === false ? true : false)}>
           <Lineicons  icon={sidbarCollapse ? DashboardSquare1Duotone : ChevronLeftCircleDuotone} size={40} color="black" strokeWidth={2} />
         </div>
       </div>
