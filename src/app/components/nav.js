@@ -4,8 +4,8 @@ import { Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone 
 import React from 'react';
 
 const links = [
-  {name: 'Home', icon: Home2Duotone, link: 'www.google.com'},
-  {name: 'Code', icon: Code1Duotone, link: 'www.google.com'},
+  {name: 'Home', icon: Home2Duotone, link: 'https:/home.theamventure.com'},
+  {name: 'Code', icon: Code1Duotone, link: 'https:/code.theamventure.com'},
   {name: 'link3', icon: Bookmark1Duotone, link: 'www.google.com'},
 
 ];
@@ -40,7 +40,7 @@ export default function Nav() {
 
         {
           links.map( (link,i) =>
-            <Link href={link.link} key={i}>
+            <Link href={link.link} key={i} target="_blank" rel="noopener noreferrer">
               <div className="flex flex-row text-red-50 items-center">
                   <div className='justify-items-center flex w-7 h-7'>
                     <div className='my-auto block m-auto flex justify-center'> 
