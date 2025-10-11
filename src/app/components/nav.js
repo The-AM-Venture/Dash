@@ -25,7 +25,9 @@ export default function Nav() {
           <img className="w-100" src="https://bucket.theamventure.com/Logo/amv/logo.png" />
         </div>
         <h1 className="ml-5 text-black text-xl font-bold">AMV</h1> 
-          <Lineicons className=" ml-auto" icon={ChevronLeftCircleDuotone} size={40} color="black" strokeWidth={2} />
+        <Link className=" ml-auto" href="/">
+          <Lineicons  icon={ChevronLeftCircleDuotone} size={40} color="black" strokeWidth={2} />
+        </Link>
       </div>
 
       
