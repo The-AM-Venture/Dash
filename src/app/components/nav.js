@@ -1,7 +1,8 @@
+'use client'
 import Link from 'next/link'
 import { Lineicons } from "@lineiconshq/react-lineicons";
 import { Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone, HelmetSafety1Duotone, Globe1Duotone } from "@lineiconshq/free-icons";
-import React from 'react';
+import React, { useState }  from 'react';
 
 const links = [
   {name: 'Home', icon: Home2Duotone, link: 'https://home.theamventure.com'},
@@ -16,18 +17,19 @@ const pLinks = [
 ];
 
 export default function Nav() {
+  const [sidbarFunction, setSidbarFunction] = useState(false);
   return (
     <>
-    <div className="w-80 h-screen bg-sky-50">
+    <div className={sidbarFunction ? `w-80 h-screen bg-sky-950` : `w-80 h-screen bg-sky-50`}>
 
       <div className="py-5 px-5 flex flex-row items-center">
         <div className="rounded-full  justify-items-center flex w-15 h-15">
           <img className="w-100" src="https://bucket.theamventure.com/Logo/amv/logo.png" />
         </div>
         <h1 className="ml-5 text-black text-xl font-bold">AMV</h1> 
-        <Link className=" ml-auto" href="/">
+        <div className=" ml-auto" onClick={() => setSidbarFunction(sidbarFunction === true ? false : true)}>
           <Lineicons  icon={ChevronLeftCircleDuotone} size={40} color="black" strokeWidth={2} />
-        </Link>
+        </div>
       </div>
 
       <div className='px-8 pt-10'>
