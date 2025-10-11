@@ -17,17 +17,17 @@ const pLinks = [
 ];
 
 export default function Nav() {
-  const [sidbarFunction, setSidbarFunction] = useState(false);
+  const [sidbarCollapse, setSidbarCollapse] = useState(false);
   return (
     <>
-    <div className={sidbarFunction ? `w-80 h-screen bg-sky-950` : `w-80 h-screen bg-sky-50`}>
+    <div className={sidbarCollapse ? `w-80 h-screen bg-sky-950` : `w-80 h-screen bg-sky-50`}>
 
       <div className="py-5 px-5 flex flex-row items-center">
         <div className="rounded-full  justify-items-center flex w-15 h-15">
           <img className="w-100" src="https://bucket.theamventure.com/Logo/amv/logo.png" />
         </div>
         <h1 className="ml-5 text-black text-xl font-bold">AMV</h1> 
-        <div className=" ml-auto" onClick={() => setSidbarFunction(sidbarFunction === true ? false : true)}>
+        <div className=" ml-auto" onClick={() => setSidbarCollapse(sidbarCollapse === true ? false : true)}>
           <Lineicons  icon={ChevronLeftCircleDuotone} size={40} color="black" strokeWidth={2} />
         </div>
       </div>
