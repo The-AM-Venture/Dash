@@ -5,9 +5,9 @@ import Nav from "./components/nav";
 export default function Home() {
   return (
     <>
-      <section>
-        <Nav />
+      <section className="flex flex-row">
         <Sidebar />
+        <Nav />
 
       </section>
     </>
