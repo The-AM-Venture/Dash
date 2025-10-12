@@ -23,9 +23,11 @@ export default function Nav() {
   return (
     <>
     <nav className='bg-sky-50 self-start h-full w-full'>
-        <div className='flex flex-row items-center p-5 h-20 w-auto'>
+        
+        <div className='relative flex flex-row items-center justify-between p-5 lg:h-20 md:h-full w-auto'>
             <p className='text-xl font-bold text-black'>Welcome</p>
-            <div className={navCollapse ? "visible" : "hidden"}>
+            <div className='absolute h-5'>
+            <div className={navCollapse ? "flex flex-col bg-sky-50 mt-8 visible" : "hidden"}>
                 {/*general links*/}
                 <div className="inline-block" onClick={() => setGeneralCollapse(generalCollapse === true ? false : true)}>
                     
@@ -34,10 +36,10 @@ export default function Nav() {
                         <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
                     </div>
                     
-                    <ul className={generalCollapse ? 'absolute block z-[1] ml-10' : `hidden`}>
+                    <ul className={generalCollapse ? 'block  ml-10' : `hidden`}>
                             {
                                 links.map( (link,i) => 
-                                    <li className='px-4 py-2 w-100 bg-sky-50'key={i} >
+                                    <li className='px-4 py-2 w-50 bg-sky-50'key={i} >
                                         <div className='items-center'>
                                             <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
                                                 <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
@@ -57,10 +59,10 @@ export default function Nav() {
                         <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
                     </div>
                     
-                    <ul className={projectsCollapse ? 'absolute block z-[1] ml-10' : `hidden`}>
+                    <ul className={projectsCollapse ? 'block ml-10' : `hidden`}>
                             {
                                 pLinks.map( (link,i) => 
-                                    <li className='px-4 py-2 w-100 bg-sky-50' key={i} >
+                                    <li className='px-4 py-2 w-50 bg-sky-50' key={i} >
                                         <div className='items-center'>
                                             <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
                                                 <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
@@ -72,6 +74,8 @@ export default function Nav() {
                             }
                     </ul>
                 </div>
+
+            </div>
 
             </div>
                         <Lineicons onClick={() => setNavCollapse(navCollapse === true ? false : true)} className="my-auto ml-auto mr-10 nav-collapse" icon={MenuHamburger1Duotone} size={40} color="black" strokeWidth={2} />
