@@ -22,8 +22,8 @@ export default function Nav() {
   const [projectsCollapse, setProjectsCollapse] = useState(false);
   return (
     <>
-    <nav className='flex flex-row h-20 bg-sky-50 w-screen'>
-        <div className='relative my-auto flex flex-row'>
+    <nav className='bg-sky-50 self-start h-full w-full'>
+        <div className='flex flex-row items-center p-5 h-20 w-auto'>
             <p className='text-xl font-bold text-black'>Welcome</p>
             <div className={navCollapse ? "visible" : "hidden"}>
                 {/*general links*/}
@@ -72,12 +72,12 @@ export default function Nav() {
                             }
                     </ul>
                 </div>
-            </div>
-        </div>
 
-        
+            </div>
                         <Lineicons onClick={() => setNavCollapse(navCollapse === true ? false : true)} className="my-auto ml-auto mr-10 nav-collapse" icon={MenuHamburger1Duotone} size={40} color="black" strokeWidth={2} />
 
+        </div>
+        
     </nav>
     </>
   )
