@@ -36,9 +36,9 @@ export default function Nav() {
                     <ul className={generalCollapse ? 'absolute block z-[1] ml-10' : `hidden`}>
                             {
                                 links.map( (link,i) => 
-                                    <li className='px-4 py-2 w-100 bg-sky-50'>
+                                    <li className='px-4 py-2 w-100 bg-sky-50'key={i} >
                                         <div className='items-center'>
-                                            <Link className='flex flex-row' href={link.link} key={i} target="_blank" rel="noopener noreferrer">
+                                            <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
                                                 <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
                                                 <p className="ml-1 text-black text-lg">{link.name}</p>
                                             </Link >
@@ -59,9 +59,9 @@ export default function Nav() {
                     <ul className={projectsCollapse ? 'absolute block z-[1] ml-10' : `hidden`}>
                             {
                                 pLinks.map( (link,i) => 
-                                    <li className='px-4 py-2 w-100 bg-sky-50'>
+                                    <li className='px-4 py-2 w-100 bg-sky-50' key={i} >
                                         <div className='items-center'>
-                                            <Link className='flex flex-row' href={link.link} key={i} target="_blank" rel="noopener noreferrer">
+                                            <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
                                                 <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
                                                 <p className="ml-1 text-black text-lg">{link.name}</p>
                                             </Link >
