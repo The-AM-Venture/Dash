@@ -33,7 +33,7 @@ export default function Nav() {
                         <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
                     </div>
                     
-                    <ul className={generalCollapse ? 'absolute block z-[1]' : `hidden`}>
+                    <ul className={generalCollapse ? 'absolute block z-[1] ml-10' : `hidden`}>
                             {
                                 links.map( (link,i) => 
                                     <li className='px-4 py-2 w-100 bg-sky-50'>
@@ -56,7 +56,7 @@ export default function Nav() {
                         <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
                     </div>
                     
-                    <ul className={projectsCollapse ? 'absolute block z-[1]' : `hidden`}>
+                    <ul className={projectsCollapse ? 'absolute block z-[1] ml-10' : `hidden`}>
                             {
                                 pLinks.map( (link,i) => 
                                     <li className='px-4 py-2 w-100 bg-sky-50'>
