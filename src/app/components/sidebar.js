@@ -20,7 +20,7 @@ export default function Sidebar() {
   const [sidbarCollapse, setSidbarCollapse] = useState(true);
   return (
     <>
-    <div className={sidbarCollapse ? `w-20 bg-sky-50 h-screen transition-all duration-500 -right-36 ` : `w-80 h-screen bg-sky-50 transition-all duration-500 -left-36 `}>
+    <div className={sidbarCollapse ? `w-20 bg-sky-50 h-screen transition-all duration-500 -right-36` : `w-80 h-screen bg-sky-50 transition-all duration-500 -left-36`}>
 
       <div className={sidbarCollapse ? "py-5 px-5 flex flex-col items-center" : "py-5 px-5 flex flex-row items-center"}>
         <div className="rounded-full  justify-items-center flex w-15 h-15">

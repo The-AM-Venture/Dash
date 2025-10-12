@@ -26,9 +26,6 @@ body {
 }
 
 
-.nav-collapse {
-  visibility: hidden;
-}
 
 /* lg media */
 @media (width >= 64rem) { 
