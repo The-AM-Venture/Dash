@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { Lineicons } from "@lineiconshq/react-lineicons";
-import { ChevronDownDuotone ,Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone, HelmetSafety1Duotone, Globe1Duotone, DashboardSquare1Duotone } from "@lineiconshq/free-icons";
+import {  MenuHamburger1Duotone, ChevronDownDuotone ,Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone, HelmetSafety1Duotone, Globe1Duotone, DashboardSquare1Duotone } from "@lineiconshq/free-icons";
 import React, { useState }  from 'react';
 
 const links = [
@@ -73,6 +73,9 @@ export default function Nav() {
                 </div>
             </div>
         </div>
+
+        
+                        <Lineicons className="my-auto ml-auto mr-10" icon={MenuHamburger1Duotone} size={20} color="black" strokeWidth={2} />
 
     </nav>
     </>
