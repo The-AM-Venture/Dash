@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { Lineicons } from "@lineiconshq/react-lineicons";
-import { Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone, HelmetSafety1Duotone, Globe1Duotone, DashboardSquare1Duotone } from "@lineiconshq/free-icons";
+import { ChevronDownDuotone ,Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone, HelmetSafety1Duotone, Globe1Duotone, DashboardSquare1Duotone } from "@lineiconshq/free-icons";
 import React, { useState }  from 'react';
 
 const links = [
@@ -17,11 +17,62 @@ const pLinks = [
 ];
 
 export default function Nav() {
+  const [generalCollapse, setGeneralCollapse] = useState(false);
+  const [projectsCollapse, setProjectsCollapse] = useState(false);
   return (
     <>
-    <nav className='flex flex-row items-center h-20 bg-sky-50 w-screen'>
-
-        <p className='text-xl font-bold text-black'>Welcome</p>
+    <nav className='flex flex-row h-20 bg-sky-50 w-screen'>
+        <div className='relative my-auto flex flex-row'>
+            <p className='text-xl font-bold text-black'>Welcome</p>
+            <div>
+                {/*general links*/}
+                <div className="inline-block" onClick={() => setGeneralCollapse(generalCollapse === true ? false : true)}>
+                    
+                    <div className='flex flex-row ml-10'>
+                        <p className='text-black font-bold text-lg pr-1 my-auto'>General</p>
+                        <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
+                    </div>
+                    
+                    <ul className={generalCollapse ? 'absolute block z-[1]' : `hidden`}>
+                            {
+                                links.map( (link,i) => 
+                                    <li className='px-4 py-2 w-100 bg-sky-50'>
+                                        <div className='items-center'>
+                                            <Link className='flex flex-row' href={link.link} key={i} target="_blank" rel="noopener noreferrer">
+                                                <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
+                                                <p className="ml-1 text-black text-lg">{link.name}</p>
+                                            </Link >
+                                        </div>
+                                    </li>
+                                )
+                            }
+                    </ul>
+                </div>
+                {/*project links*/}
+                <div className="inline-block" onClick={() => setProjectsCollapse(projectsCollapse === true ? false : true)}>
+                    
+                    <div className='flex flex-row ml-10'>
+                        <p className='text-black font-bold text-lg pr-1 my-auto'>Projects</p>
+                        <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
+                    </div>
+                    
+                    <ul className={projectsCollapse ? 'absolute block z-[1]' : `hidden`}>
+                            {
+                                pLinks.map( (link,i) => 
+                                    <li className='px-4 py-2 w-100 bg-sky-50'>
+                                        <div className='items-center'>
+                                            <Link className='flex flex-row' href={link.link} key={i} target="_blank" rel="noopener noreferrer">
+                                                <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
+                                                <p className="ml-1 text-black text-lg">{link.name}</p>
+                                            </Link >
+                                        </div>
+                                    </li>
+                                )
+                            }
+                    </ul>
+                </div>
+            </div>
+        </div>
 
     </nav>
     </>
