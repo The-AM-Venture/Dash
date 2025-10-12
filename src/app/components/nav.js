@@ -17,6 +17,7 @@ const pLinks = [
 ];
 
 export default function Nav() {
+  const [navCollapse, setNavCollapse] = useState(false);
   const [generalCollapse, setGeneralCollapse] = useState(false);
   const [projectsCollapse, setProjectsCollapse] = useState(false);
   return (
@@ -24,7 +25,7 @@ export default function Nav() {
     <nav className='flex flex-row h-20 bg-sky-50 w-screen'>
         <div className='relative my-auto flex flex-row'>
             <p className='text-xl font-bold text-black'>Welcome</p>
-            <div>
+            <div className={navCollapse ? "visible" : "hidden"}>
                 {/*general links*/}
                 <div className="inline-block" onClick={() => setGeneralCollapse(generalCollapse === true ? false : true)}>
                     
@@ -75,7 +76,7 @@ export default function Nav() {
         </div>
 
         
-                        <Lineicons className="my-auto ml-auto mr-10" icon={MenuHamburger1Duotone} size={20} color="black" strokeWidth={2} />
+                        <Lineicons onClick={() => setNavCollapse(navCollapse === true ? false : true)} className="my-auto ml-auto mr-10 nav-collapse" icon={MenuHamburger1Duotone} size={20} color="black" strokeWidth={2} />
 
     </nav>
     </>
