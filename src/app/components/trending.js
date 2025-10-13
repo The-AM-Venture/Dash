@@ -17,7 +17,7 @@ export default function Trending() {
         <div className='grid grid-cols-6'>
             {
                 testtrends.map( (link,i) => 
-                    <div className='bg-white border-1 text-black w-full h-20 p-2'>
+                    <div key={i} className='bg-white border-1 text-black w-full h-20 p-2'>
                         <div className='h-full'>
                         <div className='flex flex-row justify-between'>
                             <p>BTX - USD</p>
