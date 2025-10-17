@@ -11,8 +11,10 @@
   "dependencies": {
     "@lineiconshq/free-icons": "^1.0.3",
     "@lineiconshq/react-lineicons": "^1.0.5",
+    "chart.js": "^4.5.1",
     "next": "15.5.4",
     "react": "19.1.0",
+    "react-chartjs-2": "^5.3.0",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
