@@ -13,17 +13,17 @@ const testtrends = [
 export default function Trending() {
   return (
     <>
-        <div className='w-full'>
-        <div className='flex flex-row flex-nowrap  lg:overflow-x-hidden overflow-x-auto'>
+        <div className='w-full relative'>
+        <div className='flex flex-row flex-nowrap overflow-x-auto lg:relative absolute'>
             {
                 testtrends.map( (link,i) => 
-                    <div key={i} className='bg-white border-1 text-black lg:shrink-[none] shrink-[0] lg:grow  lg:w-[none] w-2xs h-20 p-2'>
+                    <div key={i} className='bg-white border-1 text-black flex-auto lg:w-full w-80 h-20 p-2 '>
                         <div className='h-full'>
-                        <div className='flex flex-row justify-between'>
+                        <div className='flex flex-row justify-between lg:text-lg text-xs'>
                             <p>BTX - USD</p>
                             <p>122950.60</p>
                         </div>
-                        <div className='mt-auto'>
+                        <div className='mt-auto lg:text-sm text-[1rem]'>
                         <p >^0.41% (505.44)</p>
                         </div>
 
