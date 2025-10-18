@@ -78,7 +78,7 @@ export const data = {
 export default function Chart() {
   return (
     <>
-        <div className=' lg:w-5xl w-full h-full  bg-sky-500 p-2'>
+        <div className='w-full h-full  bg-sky-500 p-2'>
             <Line options={options} data={data} />
             
         </div>
