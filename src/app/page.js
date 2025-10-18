@@ -13,7 +13,7 @@ export default function Home() {
         <div className="flex flex-col w-full h-full">
           <Nav />
           <Trending />
-          <div className=" flex flex-col md:flex-row p-5">
+          <div className=" flex 2xl:flex-row xl:flex-col lg:flex-col md:flex-col flex-col p-5">
             <Chart />
             <News />
           </div>
