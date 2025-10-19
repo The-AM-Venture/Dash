@@ -11,7 +11,7 @@ const links = [
 ];
 
 const pLinks = [
-  {name: 'My personal website', icon: Globe1Duotone, link: 'https:/alfredmalone.com'},
+  {name: 'Alfred Malone', icon: Globe1Duotone, link: 'https:/alfredmalone.com'},
   {name: 'Val Bui', icon: Globe1Duotone, link: 'https://valbui.com'},
 
 ];
@@ -37,7 +37,7 @@ export default function Sidebar() {
       <div className='px-8 pt-10'>
         {/* gerneral links*/}
           <div className="flex flex-row items-center">
-          <div className='rounded-full bg-primary-a30 justify-items-center flex w-12 h-12'>
+          <div className='rounded-full bg-primary-a0 justify-items-center flex w-12 h-12'>
             <div className='my-auto block m-auto flex justify-center'> 
               <Lineicons icon={Bookmark1Duotone} size={30} strokeWidth={2} />
             </div>
@@ -45,12 +45,12 @@ export default function Sidebar() {
           <p className="ml-1 text-xl font-bold">General</p>
           </div>
 
-          <div className='ml-10'>
+          <div className='ml-[5%] mt-2'>
 
             {
               links.map( (link,i) =>
                 <Link href={link.link} key={i} target="_blank" rel="noopener noreferrer">
-                  <div className="flex flex-row items-center">
+                  <div className="flex flex-row items-center  p-2">
                       <div className='justify-items-center flex w-7 h-7'>
                         <div className='my-auto block m-auto flex justify-center'> 
                           <Lineicons icon={link.icon} size={20} strokeWidth={2} />
@@ -67,7 +67,7 @@ export default function Sidebar() {
 
           {/* project links*/}
           <div className="flex flex-row mt-5 items-center">
-            <div className='rounded-full bg-primary-a30 justify-items-center flex w-12 h-12'>
+            <div className='rounded-full bg-primary-a0 justify-items-center flex w-12 h-12'>
               <div className='my-auto block m-auto flex justify-center'> 
                 <Lineicons icon={HelmetSafety1Duotone} size={30} strokeWidth={2} />
               </div>
@@ -75,18 +75,18 @@ export default function Sidebar() {
             <p className="ml-1 text-xl font-bold">Projects</p>
             </div>
 
-            <div className='ml-10'>
+            <div className='ml-[5%] mt-2'>
 
               {
                 pLinks.map( (link,i) =>
                   <Link href={link.link} key={i} target="_blank" rel="noopener noreferrer">
-                    <div className="flex flex-row items-center">
+                    <div className="flex flex-row items-center p-2">
                         <div className='justify-items-center flex w-7 h-7'>
                           <div className='my-auto block m-auto flex justify-center'> 
                             <Lineicons icon={link.icon} size={20} strokeWidth={2} />
                           </div>
                         </div>
-                        <p className="ml-1 text-lg">{link.name}</p>
+                        <p className="ml-1 text-xl">{link.name}</p>
                     </div>
                   </Link>
 
