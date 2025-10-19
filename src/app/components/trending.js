@@ -17,7 +17,7 @@ export default function Trending() {
         <div className='flex flex-row flex-nowrap overflow-x-auto '>
             {
                 testtrends.map( (link,i) => 
-                    <div key={i} className='bg-surface-a0 text-light-a0 border-3 border-b-6 border-surface-a10 grow w-full h-20 p-2'>
+                    <div key={i} className='border-3 bg-surface-a0 text-light-a0  border-b-6 border-surface-a10 grow w-full h-20 p-2'>
                         <div className='h-full'>
                         <div className='flex md:flex-row flex-col justify-between text-center lg:text-lg text-xs'>
                             <p>BTX</p>
