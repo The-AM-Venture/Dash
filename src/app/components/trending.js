@@ -17,14 +17,14 @@ export default function Trending() {
         <div className='flex flex-row flex-nowrap overflow-x-auto '>
             {
                 testtrends.map( (link,i) => 
-                    <div key={i} className='bg-white border-1 text-black flex-auto lg:w-full w-80 h-20 p-2'>
+                    <div key={i} className='bg-white border-1 text-black grow w-full h-20 p-2'>
                         <div className='h-full'>
-                        <div className='flex flex-row justify-between lg:text-lg text-xs'>
-                            <p>BTX - USD</p>
+                        <div className='flex md:flex-row flex-col justify-between text-center lg:text-lg text-xs'>
+                            <p>BTX</p>
                             <p>122950.60</p>
                         </div>
                         <div className='mt-auto lg:text-sm text-[1rem]'>
-                        <p >^0.41% (505.44)</p>
+                        <p >^0.41%</p>
                         </div>
 
                         </div>
