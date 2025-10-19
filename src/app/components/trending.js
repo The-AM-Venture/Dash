@@ -19,12 +19,15 @@ export default function Trending() {
                 testtrends.map( (link,i) => 
                     <div key={i} className='border-3 bg-surface-a0 text-light-a0  border-b-6 border-surface-a10 grow w-full h-20 p-2'>
                         <div className='h-full'>
-                        <div className='flex md:flex-row flex-col justify-between text-center lg:text-lg text-xs'>
+                        <div className='flex md:flex-row flex-col justify-between lg:text-justify text-center lg:text-lg text-xs'>
                             <p>BTX</p>
-                            <p>122950.60</p>
-                        </div>
-                        <div className='mt-auto lg:text-sm text-[1rem]'>
-                        <p >^0.41%</p>
+                            <div className='flex flex-col'>
+                                <p>122950.60</p>
+                                <div className='mt-auto lg:text-sm text-[1rem]'>
+                                    <p >^0.41%</p>
+                                </div>
+                            </div>
+                            
                         </div>
 
                         </div>
