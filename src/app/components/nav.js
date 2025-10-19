@@ -26,56 +26,56 @@ export default function Nav() {
         
         <div className='relative flex flex-row items-center justify-between p-5 lg:h-20 md:h-full w-auto'>
             <p className='text-xl font-bold text-black'>Welcome</p>
-            <div className='absolute h-5'>
-            <div className={navCollapse ? "flex flex-col bg-sky-50 mt-8 visible" : "hidden"}>
-                {/*general links*/}
-                <div className="inline-block" onClick={() => setGeneralCollapse(generalCollapse === true ? false : true)}>
-                    
-                    <div className='flex flex-row ml-10'>
-                        <p className='text-black font-bold text-lg pr-1 my-auto'>General</p>
-                        <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
+            <div className='absolute h-5  flex flex-col w-[80%]'>
+                <div className={navCollapse ? "flex flex-col bg-sky-50 mt-8 visible  border-black border-3" : "hidden"}>
+                    {/*general links*/}
+                    <div className="py-2  inline-block" onClick={() => setGeneralCollapse(generalCollapse === true ? false : true)}>
+                        
+                        <div className='flex flex-row ps-10'>
+                            <p className='text-black font-bold text-lg pr-1 my-auto'>General</p>
+                            <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
+                        </div>
+                        
+                        <ul className={generalCollapse ? 'block  ps-10' : `hidden`}>
+                                {
+                                    links.map( (link,i) => 
+                                        <li className='px-4 py-2 bg-sky-50' key={i} >
+                                            <div className='items-center'>
+                                                <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
+                                                    <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
+                                                    <p className="ml-1 text-black text-lg">{link.name}</p>
+                                                </Link >
+                                            </div>
+                                        </li>
+                                    )
+                                }
+                        </ul>
                     </div>
-                    
-                    <ul className={generalCollapse ? 'block  ml-10' : `hidden`}>
-                            {
-                                links.map( (link,i) => 
-                                    <li className='px-4 py-2 w-50 bg-sky-50'key={i} >
-                                        <div className='items-center'>
-                                            <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
-                                                <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
-                                                <p className="ml-1 text-black text-lg">{link.name}</p>
-                                            </Link >
-                                        </div>
-                                    </li>
-                                )
-                            }
-                    </ul>
-                </div>
-                {/*project links*/}
-                <div className="inline-block" onClick={() => setProjectsCollapse(projectsCollapse === true ? false : true)}>
-                    
-                    <div className='flex flex-row ml-10'>
-                        <p className='text-black font-bold text-lg pr-1 my-auto'>Projects</p>
-                        <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
+                    {/*project links*/}
+                    <div className="py-2 inline-block" onClick={() => setProjectsCollapse(projectsCollapse === true ? false : true)}>
+                        
+                        <div className='flex flex-row ps-10'>
+                            <p className='text-black font-bold text-lg pr-1 my-auto'>Projects</p>
+                            <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
+                        </div>
+                        
+                        <ul className={projectsCollapse ? 'block ps-10' : `hidden`}>
+                                {
+                                    pLinks.map( (link,i) => 
+                                        <li className='px-4 py-2 bg-sky-50' key={i} >
+                                            <div className='items-center'>
+                                                <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
+                                                    <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
+                                                    <p className="ml-1 text-black text-lg">{link.name}</p>
+                                                </Link >
+                                            </div>
+                                        </li>
+                                    )
+                                }
+                        </ul>
                     </div>
-                    
-                    <ul className={projectsCollapse ? 'block ml-10' : `hidden`}>
-                            {
-                                pLinks.map( (link,i) => 
-                                    <li className='px-4 py-2 w-50 bg-sky-50' key={i} >
-                                        <div className='items-center'>
-                                            <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
-                                                <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
-                                                <p className="ml-1 text-black text-lg">{link.name}</p>
-                                            </Link >
-                                        </div>
-                                    </li>
-                                )
-                            }
-                    </ul>
-                </div>
 
-            </div>
+                </div>
 
             </div>
                         <Lineicons onClick={() => setNavCollapse(navCollapse === true ? false : true)} className="nav-collapse md:hidden" icon={MenuHamburger1Duotone} size={40} color="black" strokeWidth={2} />
