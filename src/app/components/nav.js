@@ -33,7 +33,7 @@ export default function Nav() {
                         
                         <div className='flex flex-row ps-10'>
                             <p className='font-bold text-lg pr-1 my-auto'>General</p>
-                            <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
+                            <Lineicons icon={ChevronDownDuotone} size={20} strokeWidth={2} />
                         </div>
                         
                         <ul className={generalCollapse ? 'block  ps-10' : `hidden`}>
@@ -42,7 +42,7 @@ export default function Nav() {
                                         <li className='px-4 py-2' key={i} >
                                             <div className='items-center'>
                                                 <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
-                                                    <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
+                                                    <Lineicons icon={link.icon} size={20} strokeWidth={2} />
                                                     <p className="ml-1 text-lg">{link.name}</p>
                                                 </Link >
                                             </div>
@@ -56,7 +56,7 @@ export default function Nav() {
                         
                         <div className='flex flex-row ps-10'>
                             <p className='font-bold text-lg pr-1 my-auto'>Projects</p>
-                            <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
+                            <Lineicons icon={ChevronDownDuotone} size={20} strokeWidth={2} />
                         </div>
                         
                         <ul className={projectsCollapse ? 'block ps-10' : `hidden`}>
@@ -65,7 +65,7 @@ export default function Nav() {
                                         <li className='px-4 py-2' key={i} >
                                             <div className='items-center'>
                                                 <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
-                                                    <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
+                                                    <Lineicons icon={link.icon} size={20} strokeWidth={2} />
                                                     <p className="ml-1 text-lg">{link.name}</p>
                                                 </Link >
                                             </div>
@@ -78,7 +78,7 @@ export default function Nav() {
                 </div>
 
             </div>
-                        <Lineicons onClick={() => setNavCollapse(navCollapse === true ? false : true)} className="nav-collapse md:hidden" icon={MenuHamburger1Duotone} size={40} color="black" strokeWidth={2} />
+                        <Lineicons onClick={() => setNavCollapse(navCollapse === true ? false : true)} className="nav-collapse md:hidden" icon={MenuHamburger1Duotone} size={40} strokeWidth={2} />
 
         </div>
         
