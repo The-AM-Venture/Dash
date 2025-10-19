@@ -22,28 +22,28 @@ export default function Nav() {
   const [projectsCollapse, setProjectsCollapse] = useState(false);
   return (
     <>
-    <nav className='bg-sky-50 self-start h-full w-full'>
+    <nav className='bg-surface-a10 text-light-a0 self-start h-full w-full'>
         
         <div className='relative flex flex-row items-center justify-between p-5 lg:h-20 md:h-full w-auto'>
-            <p className='text-xl font-bold text-black'>Welcome</p>
+            <p className='text-xl font-bold'>Welcome</p>
             <div className='absolute h-5  flex flex-col w-[80%]'>
-                <div className={navCollapse ? "flex flex-col bg-sky-50 mt-8 visible  border-black border-3" : "hidden"}>
+                <div className={navCollapse ? "flex flex-col bg-surface-a10 text-light-a0 mt-8 visible  border-black border-3" : "hidden"}>
                     {/*general links*/}
                     <div className="py-2  inline-block" onClick={() => setGeneralCollapse(generalCollapse === true ? false : true)}>
                         
                         <div className='flex flex-row ps-10'>
-                            <p className='text-black font-bold text-lg pr-1 my-auto'>General</p>
+                            <p className='font-bold text-lg pr-1 my-auto'>General</p>
                             <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
                         </div>
                         
                         <ul className={generalCollapse ? 'block  ps-10' : `hidden`}>
                                 {
                                     links.map( (link,i) => 
-                                        <li className='px-4 py-2 bg-sky-50' key={i} >
+                                        <li className='px-4 py-2' key={i} >
                                             <div className='items-center'>
                                                 <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
                                                     <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
-                                                    <p className="ml-1 text-black text-lg">{link.name}</p>
+                                                    <p className="ml-1 text-lg">{link.name}</p>
                                                 </Link >
                                             </div>
                                         </li>
@@ -55,18 +55,18 @@ export default function Nav() {
                     <div className="py-2 inline-block" onClick={() => setProjectsCollapse(projectsCollapse === true ? false : true)}>
                         
                         <div className='flex flex-row ps-10'>
-                            <p className='text-black font-bold text-lg pr-1 my-auto'>Projects</p>
+                            <p className='font-bold text-lg pr-1 my-auto'>Projects</p>
                             <Lineicons icon={ChevronDownDuotone} size={20} color="black" strokeWidth={2} />
                         </div>
                         
                         <ul className={projectsCollapse ? 'block ps-10' : `hidden`}>
                                 {
                                     pLinks.map( (link,i) => 
-                                        <li className='px-4 py-2 bg-sky-50' key={i} >
+                                        <li className='px-4 py-2' key={i} >
                                             <div className='items-center'>
                                                 <Link className='flex flex-row' href={link.link} target="_blank" rel="noopener noreferrer">
                                                     <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
-                                                    <p className="ml-1 text-black text-lg">{link.name}</p>
+                                                    <p className="ml-1 text-lg">{link.name}</p>
                                                 </Link >
                                             </div>
                                         </li>

@@ -11,7 +11,7 @@ const testposts = [
 export default function News() {
   return (
     <>
-        <div className='lg:ml-5 ml-[0%] lg:mt-[0%] mt-5 lg:w-[46%] w-full h-full  bg-sky-500 p-2'>
+        <div className='lg:ml-5 ml-[0%] lg:mt-[0%] mt-5 lg:w-[46%] w-full h-full bg-surface-a10 text-light-a0 p-2'>
             <h1 className='text-4xl font-bold'>News</h1>
 
             {

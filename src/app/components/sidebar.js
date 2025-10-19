@@ -20,15 +20,15 @@ export default function Sidebar() {
   const [sidbarCollapse, setSidbarCollapse] = useState(true);
   return (
     <>
-    <div className={sidbarCollapse ? `w-20 bg-sky-50 h-screen transition-all duration-500 -right-36 lg:block hidden` : `w-80 h-screen bg-sky-50 transition-all duration-500 -left-36 lg:block hidden`}>
+    <div className={sidbarCollapse ? `w-20 bg-surface-a10 text-light-a0 h-screen transition-all duration-500 -right-36 lg:block hidden` : `w-80 h-screen bg-surface-a10 text-light-a0 transition-all duration-500 -left-36 lg:block hidden`}>
 
       <div className={sidbarCollapse ? "py-5 px-5 flex flex-col items-center" : "py-5 px-5 flex flex-row items-center"}>
         <div className="rounded-full  justify-items-center flex w-15 h-15">
           <img className="w-100" src="https://bucket.theamventure.com/Logo/amv/logo.png" />
         </div>
-        <h1 className={sidbarCollapse ? 'invisible' : "ml-5 text-black text-xl font-bold visible"}>AMV</h1> 
+        <h1 className={sidbarCollapse ? 'invisible' : "ml-5 text-xl font-bold visible"}>AMV</h1> 
         <div className={sidbarCollapse ? 'ml-1' : " ml-auto"} onClick={() => setSidbarCollapse(sidbarCollapse === false ? true : false)}>
-          <Lineicons  icon={sidbarCollapse ? DashboardSquare1Duotone : ChevronLeftCircleDuotone} size={40} color="black" strokeWidth={2} />
+          <Lineicons  icon={sidbarCollapse ? DashboardSquare1Duotone : ChevronLeftCircleDuotone} size={40}  strokeWidth={2} />
         </div>
       </div>
 
@@ -36,13 +36,13 @@ export default function Sidebar() {
 
       <div className='px-8 pt-10'>
         {/* gerneral links*/}
-          <div className="flex flex-row text-red-50 items-center">
-          <div className='rounded-full  justify-items-center bg-sky-950 flex w-12 h-12'>
+          <div className="flex flex-row items-center">
+          <div className='rounded-full bg-primary-a30 justify-items-center flex w-12 h-12'>
             <div className='my-auto block m-auto flex justify-center'> 
-              <Lineicons icon={Bookmark1Duotone} size={30} color="white" strokeWidth={2} />
+              <Lineicons icon={Bookmark1Duotone} size={30} strokeWidth={2} />
             </div>
           </div>
-          <p className="ml-1 text-black text-xl font-bold">General</p>
+          <p className="ml-1 text-xl font-bold">General</p>
           </div>
 
           <div className='ml-10'>
@@ -50,13 +50,13 @@ export default function Sidebar() {
             {
               links.map( (link,i) =>
                 <Link href={link.link} key={i} target="_blank" rel="noopener noreferrer">
-                  <div className="flex flex-row text-red-50 items-center">
+                  <div className="flex flex-row items-center">
                       <div className='justify-items-center flex w-7 h-7'>
                         <div className='my-auto block m-auto flex justify-center'> 
-                          <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
+                          <Lineicons icon={link.icon} size={20} strokeWidth={2} />
                         </div>
                       </div>
-                      <p className="ml-1 text-black text-lg">{link.name}</p>
+                      <p className="ml-1 text-lg">{link.name}</p>
                   </div>
                 </Link>
 
@@ -67,12 +67,12 @@ export default function Sidebar() {
 
           {/* project links*/}
           <div className="flex flex-row mt-5 items-center">
-            <div className='rounded-full  justify-items-center bg-sky-950 flex w-12 h-12'>
+            <div className='rounded-full bg-primary-a30 justify-items-center flex w-12 h-12'>
               <div className='my-auto block m-auto flex justify-center'> 
-                <Lineicons icon={HelmetSafety1Duotone} size={30} color="white" strokeWidth={2} />
+                <Lineicons icon={HelmetSafety1Duotone} size={30} strokeWidth={2} />
               </div>
             </div>
-            <p className="ml-1 text-black text-xl font-bold">Projects</p>
+            <p className="ml-1 text-xl font-bold">Projects</p>
             </div>
 
             <div className='ml-10'>
@@ -80,13 +80,13 @@ export default function Sidebar() {
               {
                 pLinks.map( (link,i) =>
                   <Link href={link.link} key={i} target="_blank" rel="noopener noreferrer">
-                    <div className="flex flex-row text-red-50 items-center">
+                    <div className="flex flex-row items-center">
                         <div className='justify-items-center flex w-7 h-7'>
                           <div className='my-auto block m-auto flex justify-center'> 
-                            <Lineicons icon={link.icon} size={20} color="black" strokeWidth={2} />
+                            <Lineicons icon={link.icon} size={20} strokeWidth={2} />
                           </div>
                         </div>
-                        <p className="ml-1 text-black text-lg">{link.name}</p>
+                        <p className="ml-1 text-lg">{link.name}</p>
                     </div>
                   </Link>
 
