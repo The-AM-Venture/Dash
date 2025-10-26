@@ -87,7 +87,7 @@ export default function Sidebar() {
                             <Lineicons icon={link.icon} size={20} strokeWidth={2} />
                           </div>
                         </div>
-                        <p className="ml-1 text-xl">{link.name}</p>
+                        <p className="ml-1 text-lg">{link.name}</p>
                     </div>
                   </Link>
 
