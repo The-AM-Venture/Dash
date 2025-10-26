@@ -7,6 +7,7 @@ import React, { useState }  from 'react';
 const links = [
   {name: 'Home', icon: Home2Duotone, link: 'https://home.theamventure.com'},
   {name: 'Code', icon: Code1Duotone, link: 'https://code.theamventure.com'},
+  {name: 'Status', icon: Code1Duotone, link: 'https://https://status.theamventure.com'},
 
 ];
 
