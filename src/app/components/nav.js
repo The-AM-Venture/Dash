@@ -26,7 +26,7 @@ export default function Nav() {
         
         <div className='relative flex flex-row items-center justify-between p-5 lg:h-20 md:h-full w-auto'>
             <p className='text-xl font-bold'>Welcome</p>
-            <div className='absolute h-5  flex flex-col w-[80%]'>
+            <div className='absolute z-40 h-5  flex flex-col w-[80%]'>
                 <div className={navCollapse ? "flex flex-col bg-surface-a10 text-light-a0 mt-8 visible  border-black border-3" : "hidden"}>
                     {/*general links*/}
                     <div className="py-2  inline-block" onClick={() => setGeneralCollapse(generalCollapse === true ? false : true)}>
