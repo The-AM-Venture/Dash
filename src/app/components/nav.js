@@ -24,7 +24,10 @@ export default function Nav() {
     <>
     <nav className='bg-surface-a10 text-light-a0'>
         
-        <div className='relative flex flex-row items-center justify-between p-5 lg:h-20 md:h-full w-auto'>
+        <div className='relative flex flex-row items-center p-5 lg:h-20 md:h-full w-auto'>
+            <div className="rounded-full flex lg:hidden visable w-20 h-20">
+                <img className="w-100" src="https://bucket.theamventure.com/Logo/amv/logo.png" />
+            </div>
             <p className='text-xl font-bold'>Welcome</p>
             <div className='absolute z-40 h-5  flex flex-col w-[80%]'>
                 <div className={navCollapse ? "flex flex-col bg-surface-a10 text-light-a0 mt-8 visible  border-black border-3" : "hidden"}>
@@ -78,7 +81,7 @@ export default function Nav() {
                 </div>
 
             </div>
-                        <Lineicons onClick={() => setNavCollapse(navCollapse === true ? false : true)} className="nav-collapse lg:hidden" icon={MenuHamburger1Duotone} size={40} strokeWidth={2} />
+                        <Lineicons onClick={() => setNavCollapse(navCollapse === true ? false : true)} className="ml-auto nav-collapse lg:hidden" icon={MenuHamburger1Duotone} size={40} strokeWidth={2} />
 
         </div>
         
