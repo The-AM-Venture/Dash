@@ -1,13 +1,13 @@
 'use client'
 import Link from 'next/link'
 import { Lineicons } from "@lineiconshq/react-lineicons";
-import {  MenuHamburger1Duotone, ChevronDownDuotone ,Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone, HelmetSafety1Duotone, Globe1Duotone, DashboardSquare1Duotone } from "@lineiconshq/free-icons";
+import {  MenuHamburger1Duotone, BarChart4Duotone, ChevronDownDuotone ,Bookmark1Duotone, ChevronLeftCircleDuotone, Home2Duotone, Code1Duotone, HelmetSafety1Duotone, Globe1Duotone, DashboardSquare1Duotone } from "@lineiconshq/free-icons";
 import React, { useState }  from 'react';
 
 const links = [
   {name: 'Home', icon: Home2Duotone, link: 'https://home.theamventure.com'},
   {name: 'Code', icon: Code1Duotone, link: 'https://code.theamventure.com'},
-  {name: 'Status', icon: Code1Duotone, link: 'https://status.theamventure.com'},
+  {name: 'Status', icon: BarChart4Duotone, link: 'https://status.theamventure.com'},
 
 ];
 
