@@ -78,7 +78,7 @@ export default function Nav() {
                 </div>
 
             </div>
-                        <Lineicons onClick={() => setNavCollapse(navCollapse === true ? false : true)} className="nav-collapse md:hidden" icon={MenuHamburger1Duotone} size={40} strokeWidth={2} />
+                        <Lineicons onClick={() => setNavCollapse(navCollapse === true ? false : true)} className="nav-collapse lg:hidden" icon={MenuHamburger1Duotone} size={40} strokeWidth={2} />
 
         </div>
         

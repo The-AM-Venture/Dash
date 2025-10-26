@@ -15,7 +15,7 @@ export default function Home() {
           <div className="relative w-full overflow-x-auto h-20">
           <Trending />
           </div>
-          <div className=" flex 2xl:flex-row xl:flex-col lg:flex-col md:flex-col flex-col p-5">
+          <div className=" flex lg:flex-row flex-col p-5">
             <Chart />
             <News />
           </div>
