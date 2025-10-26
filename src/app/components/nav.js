@@ -22,7 +22,7 @@ export default function Nav() {
   const [projectsCollapse, setProjectsCollapse] = useState(false);
   return (
     <>
-    <nav className='bg-surface-a10 text-light-a0 self-start h-full w-full'>
+    <nav className='bg-surface-a10 text-light-a0'>
         
         <div className='relative flex flex-row items-center justify-between p-5 lg:h-20 md:h-full w-auto'>
             <p className='text-xl font-bold'>Welcome</p>

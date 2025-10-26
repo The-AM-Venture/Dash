@@ -13,11 +13,11 @@ const testtrends = [
 export default function Trending() {
   return (
     <>
-        <div className='w-full'>
-        <div className='flex flex-row flex-nowrap overflow-x-auto '>
+        <div className=''>
+        <div className='flex flex-row flex-nowrap overflow-x-auto'>
             {
                 testtrends.map( (link,i) => 
-                    <div key={i} className='border-3 bg-surface-a0 text-light-a0  border-b-6 border-surface-a10 grow w-full h-20 p-2'>
+                    <div key={i} className='border-3 bg-surface-a0 text-light-a0  border-b-6 border-surface-a10 grow h-20 p-2'>
                         <div className='h-full'>
                         <div className='flex md:flex-row flex-col justify-between lg:text-justify text-center lg:text-lg text-xs'>
                             <p>BTX</p>

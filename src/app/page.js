@@ -8,9 +8,9 @@ import News from "./components/news";
 export default function Home() {
   return (
     <>
-      <section className="flex flex-row">
+      <section className="flex flex-row w-auto">
         <Sidebar />
-        <div className="flex flex-col w-full h-full">
+        <div className="flex flex-col">
           <Nav />
           <Trending />
           <div className=" flex 2xl:flex-row xl:flex-col lg:flex-col md:flex-col flex-col p-5">
