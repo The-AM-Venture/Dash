@@ -11,7 +11,6 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { faker } from '@faker-js/faker';
 
 ChartJS.register(
   CategoryScale,
@@ -39,15 +38,7 @@ const options = {
     y: {
       type: "linear",
       display: true,
-      position: "left"
-    },
-    y1: {
-      type: "linear",
-      display: true,
-      position: "right",
-      grid: {
-        drawOnChartArea: false
-      }
+      position: "right"
     }
   }
 }
@@ -69,7 +60,21 @@ export const data = {
       data: [11,5,7,5,11,3,1],
       borderColor: "rgba(235, 223, 53, 1)",
       backgroundColor: "rgba(87, 219, 60, 0.5)",
-      yAxisID: "y1"
+      yAxisID: "y"
+    },
+    {
+      label: "Dataset 3",
+      data: [14,1,4,5,15,40,2],
+      borderColor: "rgba(37, 202, 15, 1)",
+      backgroundColor: "rgba(87, 219, 60, 0.5)",
+      yAxisID: "y"
+    },
+    {
+      label: "Dataset 3",
+      data: [50,40,20,30,10,20,80],
+      borderColor: "rgba(27, 200, 223, 1)",
+      backgroundColor: "rgba(87, 219, 60, 0.5)",
+      yAxisID: "y"
     }
   ]
 }
@@ -78,7 +83,7 @@ export const data = {
 export default function Chart() {
   return (
     <>
-        <div className='w-full h-full bg-surface-a10 text-light-a0 p-2'>
+        <div className='lg:w-[60%] w-full h-full bg-surface-a10 text-light-a0 p-2'>
             <Line options={options} data={data} />
             
         </div>
